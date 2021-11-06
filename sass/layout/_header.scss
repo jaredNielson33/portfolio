@@ -1,0 +1,66 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.6),
+        rgba($color-secondary, 0.2)),
+        url(../../img/cover-small.png);
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover; /* safari may need this */
+    background-position: top;
+    -moz-background-position: top;
+    -webkit-background-position: top;
+    background-attachment: fixed;
+    -moz-background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-repeat: no-repeat;
+    -moz-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
+    clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100% );
+    position: relative;
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+            only screen and (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary, 0.6),
+            rgba($color-secondary, 0.2)),
+            url(../../img/cover.png);
+    }
+
+    @include respond(phone) {
+        height: 100vh;
+        max-width: 1200px;
+        background-position: left;
+        -moz-background-position: left;
+        -webkit-background-position: left;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100% );
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100% );
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    &__logo {
+        height: 7.5rem;
+        transition: all .6s;
+        &:hover {
+            transform: scale(1.4);
+        }
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    }
+}

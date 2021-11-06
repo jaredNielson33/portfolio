@@ -1,0 +1,77 @@
+.profile {
+    width: 100%;
+    min-height: 10rem;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($black, .1);
+    background-color: rgba($white, .7);
+    border-radius: 3px;
+    padding: 6rem;
+    font-size: $default-font-size;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+    }
+
+    &__shape {
+        width: 40rem;
+        height: 40rem;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(44% at 44% 51%);
+        position: relative;
+        display: flex;
+        align-self: center;
+
+        @include respond(phone) {
+            width: 28rem;
+            height: 28rem;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        transition: all .5s;
+        margin-bottom: 2rem;
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+        &__list {
+            list-style: none;
+        }
+        &__item {
+            display: inline-block;
+            a {
+                padding: 8px;
+                text-decoration: none;
+                display: flex;
+                @include respond(phone) {
+                    padding: 5px;
+                }
+            }
+            i {
+                font-size: 3rem;
+                color: $white;
+                @include respond(phone) {
+                    font-size: 2.3rem;
+                }
+            }
+            &:hover {
+                .icon-facebook {
+                    color: $facebook;
+                }
+                .icon-linkedin2 {
+                    color: $linkedin;
+                }
+                .icon-github {
+                    color: $black;
+                }
+            }
+        }
+    }
+}
