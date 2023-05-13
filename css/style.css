@@ -380,12 +380,29 @@ body {
           left: 0rem;
           transform: scale(1.3) rotate(5deg); } }
     .gallery__photo--p3 {
-      top: 10rem;
-      left: 27%;
-      transform: rotate(-3deg); }
+      top: 18rem;
+      left: 62%;
+      transform: rotate(2deg); }
       @media only screen and (max-width: 56.25em) {
         .gallery__photo--p3 {
           top: 1rem;
+          left: 1rem;
+          transform: scale(1.1) rotate(-5deg); } }
+    .gallery__photo--p4 {
+      top: 12rem;
+      left: 27%;
+      transform: rotate(-3deg); }
+      @media only screen and (max-width: 56.25em) {
+        .gallery__photo--p4 {
+          top: 1rem;
+          left: 1rem;
+          transform: scale(1.1) rotate(-5deg); } }
+    .gallery__photo--p5 {
+      top: 25rem;
+      left: 0%; }
+      @media only screen and (max-width: 56.25em) {
+        .gallery__photo--p5 {
+          top: -4rem;
           left: 1rem;
           transform: scale(1.1) rotate(-5deg); } }
     .gallery__photo:hover {
@@ -395,7 +412,7 @@ body {
 
 .card {
   position: relative;
-  height: 52rem; }
+  height: 25rem; }
   .card__content {
     color: #fff;
     font-size: 2rem;
@@ -414,7 +431,7 @@ body {
     overflow: hidden;
     box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.35);
     border-radius: 3px; }
-  .card:hover .card__content--1, .card:hover .card__content--2, .card:hover .card__content--3 {
+  .card:hover .card__content--1, .card:hover .card__content--2, .card:hover .card__content--3, .card:hover .card__content--4 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -423,7 +440,8 @@ body {
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    height: 73rem;
+    height: auto;
+    min-height: 53rem;
     width: 55rem;
     z-index: 100;
     background-color: #fff; }
@@ -452,10 +470,12 @@ body {
     height: 19rem;
     background-blend-mode: color; }
     .card__picture--1 {
-      background-image: url(../../img/kyani.png); }
+      background-image: url(../../img/bowlero-logo.png); }
     .card__picture--2 {
-      background-image: url(../../img/general-motors.png); }
+      background-image: url(../../img/kyani.png); }
     .card__picture--3 {
+      background-image: url(../../img/general-motors.png); }
+    .card__picture--4 {
       background-image: url(../../img/church-of-jesus-christ-of-latter-day-saints.png); }
   .card__heading {
     font-size: 2.8rem;
@@ -467,18 +487,22 @@ body {
     right: 2rem;
     text-align: right;
     width: 75%; }
+  .card__overview {
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 1rem; }
   .card__details {
     color: #777;
     padding: 1rem; }
-    .card__details ul {
-      list-style: none;
+    .card__details ol {
+      list-style: unset;
       width: 100%;
-      text-decoration: none;
-      margin: 0 auto; }
-      .card__details ul li {
+      margin: 0 auto;
+      padding: 0 1.35em; }
+      .card__details ol li {
         text-align: left;
         font-size: 1.5rem;
-        padding: 1rem; }
+        padding: 0 1rem; }
   @media only screen and (max-width: 75em) {
     .card {
       height: auto;

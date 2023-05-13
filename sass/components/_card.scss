@@ -1,6 +1,6 @@
 .card {
     position: relative;
-    height: 52rem;
+    height: 25rem;
 
     &__content {
         color: $white;
@@ -18,9 +18,10 @@
         border-radius: 3px;
     }
     
-    &:hover &__content--1, &:hover &__content--2, &:hover &__content--3 {
+    &:hover &__content--1, &:hover &__content--2, &:hover &__content--3, &:hover &__content--4 {
         @include absCenter;
-        height: 73rem;
+        height: auto;
+        min-height: 53rem;
         width: 55rem;
         z-index: 100;
         background-color: $white;
@@ -55,12 +56,15 @@
         background-blend-mode: color;
 
         &--1 {
-            background-image: url(../../img/kyani.png);
+            background-image: url(../../img/bowlero-logo.png);
         }
         &--2 {
-            background-image: url(../../img/general-motors.png);
+            background-image: url(../../img/kyani.png);
         }
         &--3 {
+            background-image: url(../../img/general-motors.png);
+        }
+        &--4 {
             background-image: url(../../img/church-of-jesus-christ-of-latter-day-saints.png);
         }
     }
@@ -77,20 +81,26 @@
         width: 75%;
     }
 
+    &__overview {
+        font-size: 1.5rem;
+        text-align: left;
+        padding: 1rem;
+    }
+
     &__details {
         color: $grey-dark;
         padding: 1rem;
 
-        ul {
-            list-style: none;
+        ol {
+            list-style: unset;
             width: 100%;
-            text-decoration: none;
             margin: 0 auto;
+            padding: 0 1.35em;
 
             li {
                 text-align: left;
                 font-size: 1.5rem;
-                padding: 1rem;
+                padding: 0 1rem;
             }
             
         }
